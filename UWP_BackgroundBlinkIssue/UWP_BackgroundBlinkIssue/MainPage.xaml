@@ -19,8 +19,7 @@
                                 <RotateTransform Angle="-90" />
                             </controls:LayoutTransformControl.Transform>
                             <Grid Height="1200" Width="900">
-                                <agenda:AgendaControl ItemsSource="{Binding Items}"
-                                              SwitchTime="{Binding SwitchTime}" />
+                                <agenda:AgendaControl ItemsSource="{Binding Items}" />
                             </Grid>
                         </controls:LayoutTransformControl>
                     </DataTemplate>

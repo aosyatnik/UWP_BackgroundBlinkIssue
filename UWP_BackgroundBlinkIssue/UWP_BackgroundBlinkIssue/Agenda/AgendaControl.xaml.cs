@@ -85,21 +85,6 @@ namespace UWP_BackgroundBlinkIssue.Agenda
 
         #endregion
 
-        #region DP Switch time
-
-        public int SwitchTime
-        {
-            get { return (int)GetValue(SwitchTimeProperty); }
-            set { SetValue(SwitchTimeProperty, value); }
-        }
-
-        public static readonly DependencyProperty SwitchTimeProperty =
-                DependencyProperty.Register("SwitchTime",
-                typeof(int),
-                typeof(AgendaControl), new PropertyMetadata(0));
-
-        #endregion
-
         private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             ItemsHost.Children.Clear();
@@ -147,7 +132,7 @@ namespace UWP_BackgroundBlinkIssue.Agenda
             // Configure pager
             Pager.Count = _pages.Count;
             Pager.SelectedIndex = -1;
-            Pager.Duration = TimeSpan.FromSeconds(SwitchTime);
+            Pager.Duration = TimeSpan.FromSeconds(5);
             Pager.StopShow();
             Pager.StartShow();
         }

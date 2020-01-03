@@ -7,8 +7,6 @@ namespace UWP_BackgroundBlinkIssue
     {
         public ObservableCollection<AgendaItemViewModel> Items { get; private set; } = new ObservableCollection<AgendaItemViewModel>();
 
-        public int SwitchTime { get; private set; } = 3; // 3 seconds
-
         public RegionViewModel()
         {
             // Set up 12 agenda items.
